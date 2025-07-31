@@ -1,4 +1,4 @@
-# ResearchAgent / 研究智能体
+# ResearchAgent
 
 [English](#english) | [中文](#中文)
 
