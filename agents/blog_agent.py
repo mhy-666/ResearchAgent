@@ -9,9 +9,11 @@ class ContentIntegrationAgent:
     def __init__(self, openai_api_key: str):
         self.name = "Content Integration Agent"
         self.llm = ChatOpenAI(
-            model="gpt-4",
+            model="gpt-4o-mini",
             temperature=0.7,
-            openai_api_key=openai_api_key
+            openai_api_key=openai_api_key,
+            streaming=True,  # 启用流式响应
+            timeout=30, 
         )
         
         self.blog_prompt = ChatPromptTemplate.from_template("""

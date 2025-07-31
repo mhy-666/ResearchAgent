@@ -42,6 +42,8 @@ def search_recent_papers(domain: str, max_results: int = 10, days: int = 7) -> s
                     "arxiv_id": result.entry_id.split('/')[-1],
                     "url": result.entry_id
                 }
+                print("paper info:"+"="*10)
+                print(paper_info)
                 papers.append(paper_info)
         
         return json.dumps(papers, ensure_ascii=False, indent=2)
